@@ -22,7 +22,7 @@ steps:
 - script: |
     npm install -g ember-cli
     npm install
-    ember build -dev
+    ember build
   displayName: 'npm install, ember install and build'
 
 - task: PublishBuildArtifacts@1

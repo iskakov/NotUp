@@ -4,7 +4,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'not-up',
     environment,
-    rootURL: '/front/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

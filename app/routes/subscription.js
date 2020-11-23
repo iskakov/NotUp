@@ -1,15 +1,15 @@
 import Route from '@ember/routing/route';
 
 export default class SubscriptionRoute extends Route {
-  async init() {
+   init() {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    let res = await fetch('https://gicmoc.ru/subscription?id=ff', {
-      headers: {
-        "Content-type": "application/json",
+    let res = fetch('https://www.gicmoc.ru/subscription/?id=ff', {
+      mode: "cors",
+      headers:{
+        "Access-Control-Allow-Origin": "*"
       }
     });
-    (res.text().then((res1) => {
-      console.log(typeof res1)
-    }));
+   res.then((res1) => {console.log(res1); let f =  res1.text(); f.then((res) => {console.log(res)})}).catch((mes) => {console.log(mes)});
+
   }
 }
